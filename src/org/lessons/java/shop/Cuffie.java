@@ -33,6 +33,12 @@ public class Cuffie extends Prodotto{
     }
 
 
+    @Override
+    public String toString() {
+        return super.toString() + "Cuffie [colore=" + colore + ", isWireless=" + isWireless + "]";
+    }
+
+
 
 
 

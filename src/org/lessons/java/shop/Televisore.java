@@ -48,7 +48,7 @@ public class Televisore extends Prodotto {
 
         @Override
         public String toString() {
-            return "Televisore [pollici=" + pollici + ", isSmart=" + isSmart + "]";
+            return super.toString() + "Televisore [pollici=" + pollici + ", isSmart=" + isSmart + "]";
         }
 
 
