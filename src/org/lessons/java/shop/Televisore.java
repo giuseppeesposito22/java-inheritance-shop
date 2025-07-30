@@ -9,8 +9,8 @@ public class Televisore extends Prodotto {
 
 
 
-        public Televisore(String nome, String descrizione, float prezzo, int iva, int pollici, boolean isSmart) {
-            super(nome, descrizione, prezzo, iva);
+        public Televisore(String nome, String marca, float prezzo, int iva, int pollici, boolean isSmart) {
+            super(nome, marca, prezzo, iva);
             this.pollici = pollici;
             this.isSmart = isSmart;
         }
@@ -44,8 +44,16 @@ public class Televisore extends Prodotto {
         }
 
 
-        
 
+
+        @Override
+        public String toString() {
+            return "Televisore [pollici=" + pollici + ", isSmart=" + isSmart + "]";
+        }
+
+
+        
+        
 
         
 }

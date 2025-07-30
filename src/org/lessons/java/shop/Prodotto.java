@@ -6,18 +6,18 @@ public class Prodotto {
 
     protected int codice;
     protected String nome;
-    protected String descrizione;
+    protected String marca;
     protected float prezzo;
     protected float iva;
 
     
 
-    public Prodotto(String nome, String descrizione, float prezzo, int iva){
+    public Prodotto(String nome, String marca, float prezzo, int iva){
         Random randomNum = new Random();
 
         this.codice = randomNum.nextInt(50);
         this.nome = nome;
-        this.descrizione = descrizione;
+        this.marca = marca;
         this.prezzo = prezzo;
         this.iva = iva;
     }
@@ -43,14 +43,14 @@ public class Prodotto {
 
 
 
-    public String getDescrizione() {
-        return descrizione;
+    public String getMarca() {
+        return marca;
     }
 
 
 
-    public void setDescrizione(String descrizione) {
-        this.descrizione = descrizione;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
 
@@ -75,6 +75,19 @@ public class Prodotto {
 
     public void setIva(float iva) {
         this.iva = iva;
+    }
+
+       public float prezzoIva(){
+         return this.prezzo = prezzo + (prezzo * (iva / 100));
+
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Prodotto [codice=" + codice + ", nome=" + nome + ", marca=" + marca + ", prezzo=" + prezzo
+                + ", iva=" + iva + "]";
     }
 
 
