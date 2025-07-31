@@ -12,14 +12,14 @@ public class Prodotto {
 
     
 
-    public Prodotto(String nome, String marca, float prezzo, int iva){
+    public Prodotto(String nome, String marca, float prezzo){
         Random randomNum = new Random();
 
         this.codice = randomNum.nextInt(50);
         this.nome = nome;
         this.marca = marca;
         this.prezzo = prezzo;
-        this.iva = iva;
+        this.iva = 22;
     }
 
 
@@ -77,9 +77,15 @@ public class Prodotto {
         this.iva = iva;
     }
 
-       public float prezzoIva(){
-         return this.prezzo = prezzo + (prezzo * (iva / 100));
+    public float prezzoIva(){
+     return  prezzo + (prezzo * (iva / 100));
 
+    }
+
+    public float prezzoCartaFedelta(){
+        float prezzoScontato;
+        prezzoScontato = prezzoIva() - (prezzoIva() * (2f / 100));
+        return prezzoScontato;
     }
 
 

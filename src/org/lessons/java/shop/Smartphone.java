@@ -1,27 +1,32 @@
 package org.lessons.java.shop;
 
+import java.util.Random;
+
 public class Smartphone extends Prodotto {
 
-      private String imei;
+      private int imei;
       private int memoria;
 
 
 
-      public Smartphone(String nome, String marca, float prezzo, int iva, String imei, int memoria) {
-        super(nome, marca, prezzo, iva);
-        this.imei = imei;
+      public Smartphone(String nome, String marca, float prezzo, int memoria) {
+
+        Random randomNun = new Random();
+
+        super(nome, marca, prezzo);
+        this.imei = randomNun.nextInt(999999999);
         this.memoria = memoria;
       }
 
 
 
-      public String getImei() {
+      public int getImei() {
           return imei;
       }
 
 
 
-      public void setImei(String imei) {
+      public void setImei(int imei) {
           this.imei = imei;
       }
 

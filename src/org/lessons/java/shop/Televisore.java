@@ -9,8 +9,8 @@ public class Televisore extends Prodotto {
 
 
 
-        public Televisore(String nome, String marca, float prezzo, int iva, int pollici, boolean isSmart) {
-            super(nome, marca, prezzo, iva);
+        public Televisore(String nome, String marca, float prezzo, int pollici, boolean isSmart) {
+            super(nome, marca, prezzo);
             this.pollici = pollici;
             this.isSmart = isSmart;
         }
