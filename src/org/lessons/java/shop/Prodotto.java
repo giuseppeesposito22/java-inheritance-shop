@@ -78,13 +78,13 @@ public class Prodotto {
     }
 
     public float prezzoIva(){
-     return  prezzo + (prezzo * (iva / 100));
+     return prezzo = prezzo + (prezzo * (iva / 100));
 
     }
 
     public float prezzoCartaFedelta(){
         float prezzoScontato;
-        prezzoScontato = prezzoIva() - (prezzoIva() * (2f / 100));
+        prezzoScontato = prezzoIva() * (1 - 0.02f);
         return prezzoScontato;
     }
 

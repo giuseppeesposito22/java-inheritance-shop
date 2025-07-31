@@ -43,6 +43,16 @@ public class Smartphone extends Prodotto {
       }
 
 
+      @Override
+        public float prezzoCartaFedelta(){
+        float sconto = this.memoria < 32 ? 0.05f : 0.02f;
+        float prezzoScontato;
+        prezzoScontato = prezzoIva() * (1 - sconto);
+        return prezzoScontato;
+    }
+
+
+
 
       @Override
       public String toString() {
