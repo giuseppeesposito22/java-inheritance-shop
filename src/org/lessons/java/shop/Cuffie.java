@@ -32,6 +32,14 @@ public class Cuffie extends Prodotto{
         this.isWireless = isWireless;
     }
 
+    @Override
+    public float prezzoCartaFedelta(){
+    float sconto = this.isWireless == false ? 0.07f : 0.02f;
+    float prezzoScontato;
+    prezzoScontato = prezzoIva() * (1 - sconto);
+    return prezzoScontato;
+    }
+
 
     @Override
     public String toString() {
