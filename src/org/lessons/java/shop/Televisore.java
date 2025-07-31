@@ -44,6 +44,14 @@ public class Televisore extends Prodotto {
         }
 
 
+        @Override
+        public float prezzoCartaFedelta(){
+        float sconto = this.isSmart == true ? 0.10f : 0.02f;
+        float prezzoScontato;
+        prezzoScontato = prezzoIva() * (1 - sconto);
+        return prezzoScontato;
+    }
+
 
 
         @Override
